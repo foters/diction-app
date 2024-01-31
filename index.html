@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <title>Speech</title>
+</head>
+<body>
+  <header>
+    <section>Header</section>
+  </header>
+  <main>
+
+    <section>
+      <div class="box global-wrapper">
+        <div class="text-message-wrapper global-wrapper-field step step-1" data-step="1">
+          <input type="text" class="input-element -untouched" id="speech-text" placeholder="Write you message" onkeyup="checkFieldError(event), enableStepButton(event)">
+        </div>
+        <div class="language-option-wrapper global-wrapper-field step step-2" data-step="2">
+          <div class="language-box">
+            <select id="language-options" onchange="getSelectedLanguage(event)" class="input-element -untouched">
+              <option value="default-value" disabled selected>Select language</option>
+              <option value="en-GB">English</option>
+              <option value="es-ES">Español</option>
+              <option value="fr-FR">Français</option>
+              <option value="it-IT">Italiano</option>
+              <option value="ja-JP">日本語</option>
+              <option value="de-DE">Deutsch</option>
+            </select>
+          </div>
+          <div class="language-voice-box step step-3" data-step="3">
+            <select id="voice-options" class="input-element -untouched" disabled onchange="getSelectedVoice(event)">
+              <option value="default-value">Select voice</option>
+            </select>
+            <button class="listen-message" onclick="listenMessage()" disabled>Listen your message</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
